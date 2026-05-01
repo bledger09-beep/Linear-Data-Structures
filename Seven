@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 3, 4, 4, 2, 3, 3, 4, 3, 2 };
+
+        int[] count = new int[1001];
+
+        foreach (int num in arr)
+        {
+            count[num]++;
+        }
+
+        for (int i = 0; i < count.Length; i++)
+        {
+            if (count[i] > 0)
+            {
+                Console.WriteLine($"{i}: {count[i]} times");
+            }
+        }
+    }
+}
